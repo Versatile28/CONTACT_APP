@@ -7,6 +7,7 @@ const app = express();
 // const mongoose = require('mongoose');
 const {connect} = require('mongoose');
 let { PORT,MONGODB_URI} = require('./config/index');
+const Schema = require('./schema/schema');
 
 let connectDb = async()=>{
   // await mongoose.connect(MONGODB_URI);

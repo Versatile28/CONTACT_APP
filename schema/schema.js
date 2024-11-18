@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const cnt_Schema = new mongoose.Schema({
+const {model,Schema} = require('mongoose')
+const cnt_Schema = new Schema({
    fanme:{
       type:String,
       required:true
@@ -17,4 +17,9 @@ const cnt_Schema = new mongoose.Schema({
       required:true,
       enum:['mobile','sim','email']
    }
-},{timestamps:true})
+},{Timestamps:true})
+
+module.exports = model('cnt_Schema',cnt_Schema,'cnt_Schema');
+//? module.exports = model('cnt_Schema',cnt_Schema); // collection name created - cnt_Schemas
+//? module.exports = model('cnt_Schemy',cnt_Schema); // collection name created - cnt_Schemies
+//? module.exports = model('cnt_Schema',cnt_Schema,'cnt_Schema'); // to restrict prual form
