@@ -1,6 +1,6 @@
 const {model,Schema} = require('mongoose')
 const cnt_Schema = new Schema({
-   fanme:{
+   fname:{
       type:String,
       required:true
    },
