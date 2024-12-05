@@ -1,0 +1,28 @@
+<main>
+   <section class="conlist">
+      <h1>Contact List</h1>
+      {{#each payload}}
+      <div class="c2">
+         <ul class="c3">
+            <li>First Name: {{this.fname}}</li>
+            <li>Last Name: {{this.lname}}</li>
+            <li>Number: {{this.number}}</li>
+            <li>Saved Location: {{this.loc}}</li>
+         </ul>
+         <li class="btn-group">
+            <span class="cntInfo">
+               <a href="/api/{{this._id}}">Info</a>
+            </span>
+            <span class="edit">
+               <a href="/api/edit/{{this._id}}">Edit</a>
+            </span>
+            <span class="delete">
+               <a href="/api/delete/{{this._id}}">Delete</a>
+            </span>
+         </li>
+      </div>
+      {{else}}
+      <h1>No Contacts Please Create Contact First</h1>
+      {{/each}}
+   </section>
+</main>

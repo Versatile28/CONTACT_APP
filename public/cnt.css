@@ -1,57 +1,266 @@
-*{
-   margin: 0px;
+/* General Reset */
+* {
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
 }
 
-body{
+/* Body Styling */
+body {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   height: 100vh;
+   width: 100vw;
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
 }
 
-.c1 section{
-   max-height: 80%;
-   max-width: 50%;
+body h1 {
+   margin: 10px 0;
+   color: #333;
+   font-size: 1.8rem;
 }
 
-.c1 form{
+/* Form Container Styling */
+.c1 {
+   width: 400px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.c1 form {
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
+   gap: 15px;
 }
 
-.c1 .con-group{
+/* Input Group Styling */
+.c1 .con-group {
    display: flex;
    flex-direction: column;
-   justify-content: start;
-   align-items: center;
-}
-
-.c1 .con-group label{
-   font-size: 25px;
-   font-weight: 700;
-}
-
-.c1 .con-group input{
-   padding: 5px 0px;
+   align-items: start;
    width: 100%;
-   border: 1px solid grey;
+}
+
+.c1 .con-group label {
+   font-size: 0.9rem;
+   font-weight: bold;
+   margin-bottom: 5px;
+   color: #444;
+}
+
+.c1 .con-group input,
+.c1 .con-group select {
+   padding: 8px 10px;
+   height: 40px;
+   width: 100%;
+   border: 1px solid #ccc;
    border-radius: 5px;
+   transition: border-color 0.3s ease;
 }
 
-.c1 form button{
+.c1 .con-group input:focus,
+.c1 .con-group select:focus {
+   border-color: #4caf50;
+   outline: none;
+}
+
+/* Button Styling */
+.c1 form button {
    width: 100%;
-   height: 30px;
-   background-color: green;
+   height: 40px;
+   background-color: #4caf50;
    color: white;
-   border: 1px solid black;
-   transition: .3s;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: background-color 0.3s, color 0.3s;
 }
 
-.c1 form button:hover{
-   color: green;
+.c1 form button:hover {
    background-color: white;
-   border: 1px solid black;
+   color: #4caf50;
+   border: 1px solid #4caf50;
+}
+
+/* Contact List Section Styling */
+section.conlist {
+   margin: 20px auto;
+   padding: 20px;
+   max-width: 800px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact List Heading */
+section.conlist h1 {
+   text-align: center;
+   font-size: 1.8rem;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+/* Individual Contact Card */
+.c2 {
+   border: 1px solid #ddd;
+   background-color: #fefefe;
+   padding: 15px;
+   border-radius: 6px;
+   margin-bottom: 20px;
+   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+   transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.c2:hover {
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   transform: translateY(-2px);
+}
+
+/* Contact List Details */
+.c3 {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.c3 li {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 8px;
+}
+
+.c3 li:first-child {
+   font-weight: bold;
+   color: #222;
+}
+
+/* No Contacts Message */
+section.conlist h1:last-child {
+   color: #888;
+   text-align: center;
+   font-style: italic;
+   margin-top: 40px;
+}
+
+
+
+/* .nav {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   background-color: #f5f5f5;
+}
+
+.navbar {
+   width: 100%;
+   background-color: #4caf50;
+   color: white;
+   padding: 10px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+}
+
+.navbar h1 {
+   font-size: 1.5rem;
+   margin: 0;
+} */
+
+/* Main Content */
+main {
+   flex: 1;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Contact List Section */
+section.conlist {
+   width: 1000px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   margin: 10px 0;
+}
+
+/* Contact List Heading */
+section.conlist h1 {
+   text-align: center;
+   font-size: 1.5rem;
+   color: #333;
+   margin-bottom: 15px;
+}
+
+/* Contact List as Simple List */
+.c2 {
+   padding: 10px;
+   margin-bottom: 10px;
+   border-bottom: 1px solid #ddd;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.c2:last-child {
+   border-bottom: none;
+}
+
+.c3 {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   flex-grow: 1;
+}
+
+.c3 li {
+   font-size: 0.9rem;
+   color: #555;
+}
+
+.c3 li:first-child {
+   font-weight: bold;
+   color: #222;
+}
+
+/* No Contacts Message */
+section.conlist h1:last-child {
+   color: #888;
+   text-align: center;
+   font-style: italic;
+   margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   section.conlist {
+      padding: 15px;
+   }
+
+   .navbar h1 {
+      font-size: 1.2rem;
+   }
+
+   .c2 {
+      flex-direction: column;
+      align-items: flex-start;
+   }
 }
